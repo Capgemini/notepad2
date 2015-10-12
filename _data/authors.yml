@@ -1,0 +1,12 @@
+malcolm_young:
+    name: Malcolm Young
+    twitter: malcomio
+    github: malcomio
+    linkedin: https://uk.linkedin.com/in/malcolmjohnyoung
+    description: "Senior Software Engineer at Capgemini, with an interest in front end, content strategy, and workflow."
+    team: Drupal
+    avatar: https://secure.gravatar.com/userimage/11747200/b124eeaa7e8077f3973703480afba323.jpg?size=200
+author_2:
+    name: Author 2
+    ex: true
+    description: "This author is marked as 'ex' so won't show up in the author listing"
