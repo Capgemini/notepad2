@@ -199,7 +199,7 @@ Notepad
 
 ### _config.yml
 
-Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. Links are absolute and prefixed with `{{ "{{ site.baseurl " }}}}` in the various `_includes` and `_layouts`, so remember to properly set `url`[^1] and use `http://localhost:4000` when developing locally or else the theme's stylesheet and scripts won't load.
+Most of the variables found here are used in the .html files found in `_includes` if you need to add or remove anything. A good place to start would be to change the title, tagline, description, and url of your site. Links are absolute and prefixed with `{{ "{{ site.url " }}}}` in the various `_includes` and `_layouts`, so remember to properly set `url`[^1] and use `http://localhost:4000` when developing locally or else the theme's stylesheet and scripts won't load.
 #### Disqus Comments
 
 Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. To enable commenting on a post, add the following to its front matter:
@@ -278,7 +278,7 @@ Post and page thumbnails work the same way. These are used by [Open Graph](https
 
 Here's an example of what a tweet to your site could look like if you activate Twitter Cards and include all the metas in your post's YAML.
 
-<img src="{{ site.baseurl }}/images/twitter-card-summary-large-image.jpg" alt="search screenshot">
+<img src="{{ site.url }}/images/twitter-summary.png" alt="search screenshot">
 
 #### Social Share Links
 
@@ -314,6 +314,6 @@ If you need help, please [file a GitHub Issue](https://github.com/capgemini/note
 
 ## License
 
-This theme is free and open source software, distributed under the [The MIT License]({{ site.baseurl }}/license/). So feel free to use this Jekyll theme on your site without linking back, or using a disclaimer.
+This theme is free and open source software, distributed under the [The MIT License]({{ site.url }}/license/). So feel free to use this Jekyll theme on your site without linking back, or using a disclaimer.
 
 [^1]: Used to generate absolute urls in `sitemap.xml`, `feed.xml`, and for canonical urls in `head.html`. Don't include a trailing `/` in your base url ie: http://capgemini.github.io/notepad2. When developing locally I suggest using `http://localhost:4000` or whatever server you're using to properly load the theme's stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home.

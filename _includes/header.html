@@ -1,5 +1,5 @@
 <a class="notepad-blog-logo" href="/">
-  <img src="{{ site.baseurl }}/images/{{ site.logo }}" alt="Capgemini">
+  <img src="{{ site.url }}/images/{{ site.logo }}" alt="Capgemini">
 </a>
 
 <div class="notepad-blog-menu">
@@ -14,11 +14,11 @@
     <li>{% if link.external %}
       <a href="{{ link.url }}">{{ link.title }}</a>
       {% else %}
-      <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+      <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
       {% endif %}
     </li>
     {% endfor %}
-    <li><a href="{{ site.baseurl }}/feed.xml" title="Atom/RSS feed"><i
+    <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i
       class="icon-rss"></i> Feed</a></li>
 
     <li>

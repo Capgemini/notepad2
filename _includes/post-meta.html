@@ -5,7 +5,7 @@
 {% assign tagsize = page.tags.size %}
 {% if tagsize != 0 %}
   <p class="post-meta-tags">on {% for tag in page.tags %}
-    <a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>
+    <a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>
     {% unless forloop.last %}, {% endunless %}
   {% endfor %}
   </p>
