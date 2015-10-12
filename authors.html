@@ -1,0 +1,57 @@
+---
+layout: page
+permalink: /authors/index.html
+title: Meet our authors
+chart: true
+---
+
+{% assign authors = site.data.authors %}
+{% assign rownum = 1 %}
+
+{% for authorloop in authors %}
+  {% assign author = authorloop[1] %}
+  {% unless author.ex %}
+    {% assign posts_by_author = "" | split: ""  %}
+
+    {% for post in site.posts %}
+      {% assign post_author = site.data.authors[post.author] %}
+      {% if post_author.name == author.name %}
+        {% assign posts_by_author = posts_by_author | push: post %}
+      {% endif %}
+    {% endfor %}
+
+    {% if posts_by_author.size > 0 %}
+      {% capture rownum %}
+        {% increment rownum %}
+      {% endcapture %}
+      {% assign mod = rownum | modulo:2 %}
+      {% if (mod) == 1 %}
+        {% assign rowstyle = 'odd' %}
+      {% else %}
+        {% assign rowstyle = 'even' %}
+      {% endif %}
+      <div class="notepad-author-info row-{{ rowstyle }}" id="author-{{ author.name | slugify }}">
+        <div class="row">
+          <section class="notepad-post-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+            {% include author-info.html %}
+          </section>
+
+          <div>
+            <ul class="post-list">
+              {% for post in posts_by_author %}
+                <li>
+                  <a href="{{ post.url }}">
+                    {{ post.title }}
+                    <span class="entry-date">
+                      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endunless %}
+{% endfor %}

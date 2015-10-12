@@ -7,6 +7,7 @@ category: articles
 tags: [sample post]
 imagefeature: cover6.jpg
 comments: true
+author: malcolm_young
 share: true
 ---
 
@@ -94,6 +95,14 @@ HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a a
 
 Syntax highlighting via Pygments
 
+    {% highlight css %}
+    #container {
+      float: left;
+      margin: 0 -240px 0 0;
+      width: 100%;
+    }
+    {% endhighlight %}
+
 {% highlight css %}
 #container {
   float: left;
@@ -106,4 +115,20 @@ Syntax highlighting via Pygments
 
 Make any link standout more when applying the `button` class.
 
+    <a href="#" class="button">Default Button</a>
+
 <a href="#" class="button">Default Button</a>
+
+### Videos
+
+    <div class="small-12 medium-4 small-centered columns">
+      <div class="flex-video">
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/bKbOod8Pn4E" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+<div class="small-12 medium-4 small-centered columns">
+  <div class="flex-video">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/bKbOod8Pn4E" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
