@@ -15,3 +15,6 @@ Forked from [Notepad by Hossain Mohd. Faysal](https://github.com/hmfaysal/Notepa
 
 ### JavaScript
 Javascript files are concatenated to reduce HTTP requests. To include a script, edit assets/js/scripts.js
+
+### Feeds
+By default there is an RSS feed at feed.xml. To create category-separated feeds, copy feed.category.xml to a new file, and change the category assignment to your own preference.
