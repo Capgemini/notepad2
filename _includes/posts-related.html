@@ -1,0 +1,34 @@
+{% assign related_posts = "" | split: ""  %}
+{% for tag in page.tags %}
+  {% assign pages_list = site.tags[tag] %}
+  {% for post in pages_list %}
+    {% if post.title != null %}
+      {% unless related_posts contains post %}
+        {% assign related_posts = related_posts | push: post %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+  {% assign pages_list = nil %}
+{% endfor %}
+
+{% if related_posts.size > 0 %}
+<div class="row" id="posts-related">
+  <div class="columns">
+    <h3>Related Posts</h3>
+    <ul class="post-list">
+      {% for post in related_posts limit:5 %}
+        {% if post.url != page.url %}
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+                  <span class="entry-date">
+                    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+                  </span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

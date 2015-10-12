@@ -1,0 +1,37 @@
+<a class="notepad-blog-logo" href="/">
+  <img src="{{ site.baseurl }}/images/{{ site.logo }}" alt="Capgemini">
+</a>
+
+<div class="notepad-blog-menu">
+  <div class="notepad-mobile-menu hide-for-large-up">
+    <a href="#"><i class="fa fa-bars"></i></a>
+  </div>
+  <ul class="notepad-menu">
+    <li class="notepad-mobile-close-btn hide-for-large-up text-right">
+      <a href="#"><i class="fa fa-times"></i></a>
+    </li>
+    {% for link in site.links %}
+    <li>{% if link.external %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      {% else %}
+      <a href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+    <li><a href="{{ site.baseurl }}/feed.xml" title="Atom/RSS feed"><i
+      class="icon-rss"></i> Feed</a></li>
+
+    <li>
+      <form action="/search" method="get" class="search-form">
+        <label for="search-terms">Search</label>
+        <input type="text" id="search-terms" name="terms" class="search-text" placeholder="Search" />
+
+        <button type="submit" value="Search" class="search-submit">
+          <i class="fa fa-search"></i>
+          <span>Search</span>
+        </button>
+      </form>
+    </li>
+  </ul>
+</div>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+  <body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
+    {% include browser-upgrade.html %}
+    <main id="notepad-page-container" class="notepad-page-container" role="main">
+      <header class="notepad-page-header">
+        <div class="notepad-page-menu-header">
+          {% include header.html %}
+        </div>
+        <div class="notepad-page-title row">
+          <div class="small-12 columns">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </header>
+    
+      <article class="notepad-page-content">
+        <div class="article-body">{{ content }}</div>
+      </article>
+      <div class="cf"></div>
+    </main>
+
+    {% include footer.html %}
+    {% include scripts.html %}
+  </body>
+</html>

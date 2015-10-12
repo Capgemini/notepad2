@@ -1,0 +1,23 @@
+<div class="row" id="posts-by-author">
+  <div class="columns">
+    {% assign name = author.name | split: ' ' %}
+    <h3>Other posts by {{ name.first  }}</h3>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        {% assign post_author = site.data.authors[post.author] %}
+        {% if post_author.name == author.name %}
+          {% unless page.url == post.url %}
+            <li>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+                <span class="entry-date">
+                  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+                </span>
+              </a>
+            </li>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="author-info">
+  {% if author.avatar %}
+  <img itemprop="image" src="{{ author.avatar }}" class="notepad-post-author-avatar" alt="{{ author.name }}'s photo">
+  {% endif %}
+
+  <h1 itemprop="name">{{ author.name }}</h1>
+
+  {% if author.description %}
+  <p itemprop="description">{{ author.description }}</p>
+  {% endif %}
+
+  <ul class="no-bullet author-social-links">
+    {% if author.twitter %}
+    <li>
+      <a class="twitter-icon" href="http://www.twitter.com/{{ author.twitter }}" title="@{{ author.twitter }} Twitter">
+        <i class="fa fa-twitter"></i>@{{ author.twitter }}
+      </a>
+    </li>
+    {% endif %}
+
+    {% if author.linkedin %}
+    {% assign name = author.name | split: ' ' %}
+    <li>
+      <a class="linkedin-icon" href="{{ author.linkedin }}" title="{{ author.linkedin }} LinkedIn">
+        <i class="fa fa-linkedin-square"></i>&nbsp;Meet {{ name.first }} on LinkedIn
+      </a>
+    </li>
+    {% endif %}
+
+    {% if author.github %}
+    <li>
+      <a class="github-icon" href="http://www.github.com/{{ author.github }}" title="@{{ author.github }} Github">
+        <i class="fa fa-github"></i>&nbsp;{{ author.github }}
+      </a>
+    </li>
+    {% endif %}
+
+    {% if author.email %}
+    <li><a href="mailto:{{ author.email }}" class="author-website" itemprop="email">{{ author.email }}</a></li>
+    {% endif %}
+  </ul>
+</div>

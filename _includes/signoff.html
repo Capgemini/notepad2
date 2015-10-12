@@ -1,0 +1,14 @@
+<!-- Look the author details up from the site config. -->
+{% assign author = site.data.authors[page.author] %}
+<!-- Output author details if some exist. -->
+{% if author %}
+<div class="notepad-author-info">
+  <div class="row">
+    <section class="notepad-post-author large-6 columns" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+      {% include author-info.html %}
+    </section>
+  </div>
+  {% include posts-by-author.html %}
+  {% include posts-related.html %}
+</div>
+{% endif %}
