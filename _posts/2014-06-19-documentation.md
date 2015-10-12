@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Documentation"
-description: "Instructions on how to install and customize the HMFAYSAL Notepad Theme."
+description: "Instructions on how to install and customize the Notepad 2 Theme."
 category: theme
 tags: [how-to]
 imagefeature: cover10.jpg
@@ -303,22 +303,17 @@ ErrorDocument 404 /404.html
 
 ---
 
-## Questions?
+## Bugs or feature requests?
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or [file a GitHub Issue](https://github.com/hmfaysal/hmfaysal-omega-theme/issues/new).
+If you need help, please [file a GitHub Issue](https://github.com/capgemini/notepad2/issues/new).
 
 ---
 
-## Requests?
-
-If you have some specific requests for this theme, or if you need help custom coding some elements, message me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or email me at [hmfaysal@alum.mit.edu](mailto:hmfaysal@alum.mit.edu)
 
 ---
 
 ## License
 
-This theme is free and open source software, distributed under the [The MIT License]({{ site.baseurl }}/license/). So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+This theme is free and open source software, distributed under the [The MIT License]({{ site.baseurl }}/license/). So feel free to use this Jekyll theme on your site without linking back, or using a disclaimer.
 
-If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
-
-[^1]: Used to generate absolute urls in `sitemap.xml`, `feed.xml`, and for canonical urls in `head.html`. Don't include a trailing `/` in your base url ie: http://hmfaysal.github.io. When developing locally I suggest using `http://localhost:4000` or whatever server you're using to properly load the theme's stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home.
+[^1]: Used to generate absolute urls in `sitemap.xml`, `feed.xml`, and for canonical urls in `head.html`. Don't include a trailing `/` in your base url ie: http://capgemini.github.io/notepad2. When developing locally I suggest using `http://localhost:4000` or whatever server you're using to properly load the theme's stylesheet, scripts, and image assets. If you leave this variable blank all links will resolve correctly except those pointing home.
