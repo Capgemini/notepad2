@@ -1,0 +1,59 @@
+
+.notepad-site-footer {
+  background: black;
+}
+
+.notepad-site-footer.with-bg-cover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.notepad-site-footer .social-icons,
+.notepad-site-footer .copyright {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.notepad-site-footer .copyright {
+  color: white;
+  float: none;
+  padding-top: 3.75rem;
+  padding-bottom: 1.25rem;
+
+  p {
+    font-size: 0.8125rem;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.notepad-site-footer .social-icons {
+  text-align: center;
+  float: none;
+  padding-bottom: 3.75rem;
+
+  a {
+    color: black;
+  }
+}
+
+@include breakpoint(desktop) {
+  .notepad-site-footer .social-icons,
+  .notepad-site-footer .copyright {
+    width: 49%;
+    padding: 2rem 5rem 2rem 5rem;
+  }
+
+  .notepad-site-footer .copyright {
+    text-align: left;
+    float: left;
+  }
+
+  .notepad-site-footer .social-icons {
+    text-align: right;
+    float: right;
+  }
+}

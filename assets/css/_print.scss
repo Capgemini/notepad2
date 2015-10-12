@@ -1,0 +1,23 @@
+@media print {
+  a {
+    text-decoration: none;
+  }
+
+  a[href]:after {
+    font-size: 80%;
+  }
+
+  // Hide URLs for links because they get added to footnotes.
+  a[href]:after {
+    content: '' !important;
+  }
+
+  .notepad-blog-menu,
+  .notepad-post-share,
+  #posts-by-author,
+  .notepad-comments-header,
+  #disqus_thread,
+  .social-icons {
+    display: none;
+  }
+}

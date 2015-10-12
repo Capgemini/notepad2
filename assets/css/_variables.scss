@@ -1,0 +1,39 @@
+// Fonts
+$open: "Open Sans", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+
+
+// Colours
+$white-off: #f2f2f2;
+$blue: #0098cc;
+$blue_dark: #2020ff;
+$green: #3F6B5B;
+$orange: #F06F00;
+$red: #ff0000;
+
+
+// Breakpoints
+@mixin breakpoint($point) {
+  @if $point == verywidescreen {
+    @media only screen and (min-width: 90em) { @content ; }
+  }
+  @else if $point == widescreen {
+    @media only screen and (min-width: 90em) { @content ; }
+  }
+  @else if $point == desktop {
+    @media only screen and (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media only screen and (min-width: 43.75em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media only screen and (min-width: 40.063em) { @content ; }
+  }
+  @else if $point == phablet {
+    @media only screen and (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media only screen and (max-width: 37.5em)  { @content ; }
+
+  }
+}

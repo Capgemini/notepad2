@@ -1,0 +1,131 @@
+.notepad-blog-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0.9375rem;
+  float: right;
+  font-family: $montserrat;
+  font-weight: 400;
+  font-size: 2.625rem;
+  height: 5rem;
+}
+
+.notepad-mobile-menu a {
+  display: inline-block;
+  outline: none;
+  color: black;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.notepad-blog-menu ul {
+  background: black;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translate3d(0, -110%, 0);
+  -ms-transform: translate3d(0, -110%, 0);
+  -moz-transform: translate3d(0, -110%, 0);
+  -o-transform: translate3d(0, -110%, 0);
+  transform: translate3d(0, -110%, 0);
+  top: 0;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  padding-top: 0;
+
+  li {
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.125rem;
+
+    @include breakpoint(mobileonly) {
+      font-size: 1.75rem;
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 2.25rem;
+    }
+
+    a {
+      color: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+
+    &.notepad-mobile-close-btn {
+      padding-right: 1.25rem;
+    }
+  }
+}
+
+.notepad-blog-menu ul.opened {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@include breakpoint(desktop) {
+  .notepad-blog-menu {
+    padding-top: 1.75rem;
+    padding-bottom: 1.5625rem;
+    font-size: 1rem;
+  }
+
+  .notepad-blog-menu ul {
+    background: transparent;
+    position: relative;
+    width: auto;
+    list-style-type: none;
+    margin: 0;
+    width: auto;
+    overflow: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    visibility: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .notepad-blog-menu ul li {
+    float: left;
+    margin-left: 1.25rem;
+    width: auto;
+    font-size: 1rem;
+    text-align: left;
+    padding: 0;
+  }
+
+  .notepad-blog-menu ul li a {
+    color: black;
+    margin-top: 0.5rem;
+    display: inline-block;
+    border-bottom: 0.1875rem solid transparent;
+    width: auto;
+    height: auto;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $blue;
+    }
+  }
+}
+
+.notepad-site-head .notepad-site-head-menu {
+  background: white;
+}

@@ -1,0 +1,30 @@
+
+.post-list {
+  padding: 0 1.25rem;
+  margin: 0 0 1rem;
+  list-style-type: none;
+
+  li {
+    @extend %notepad-clearfix;
+
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    *zoom: 1;
+  }
+
+  .entry-date {
+    display: none;
+
+    @include breakpoint(laptop) {
+      display: inline;
+    }
+  }
+
+  .entry-date {
+    font-size: 14px;
+    text-transform: uppercase;
+    float: right;
+
+  }
+}
