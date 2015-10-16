@@ -61,26 +61,6 @@
   z-index: 9999;
 }
 
-.post-template .bg-img {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-backface-visibility: hidden;
-}
-
-.post-template .bg-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  min-width: 100%;
-  min-height: 100%;
-  max-width: none;
-}
-
 .post-template .notepad-post-title {
   z-index: 1000;
   margin: 0 auto;
@@ -96,128 +76,26 @@
 
 .post-template .notepad-post-title a {
   color: black;
-}
 
-.post-template .notepad-post-title a:hover {
-  color: $blue;
-}
-
-.post-template .notepad-post-title h1 {
-  color: black;
-  font-weight: 800;
-  font-size: 2.5rem;
-  margin: 0 auto;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-@include breakpoint(tablet) {
-  .post-template .notepad-post-title h1 {
-    font-size: 3.125rem;
+  &:hover,
+  &:focus {
+    color: $blue;
   }
 }
 
-@include breakpoint(desktop) {
-  .post-template .notepad-post-title h1 {
-    font-size: 4.375rem;
-  }
-}
-
-@include breakpoint(widescreen) {
-  .post-template .notepad-post-title h1 {
-    font-size: 5.3125rem;
-  }
-}
-
-.post-template .notepad-post-title.background--light h1 {
+.background--light {
   color: black;
 }
 
-.post-template .notepad-post-title.background--dark h1 {
+.background--dark {
   color: white;
-}
 
-.post-template button.trigger {
-  position: fixed;
-  bottom: 2.5rem;
-  left: 50%;
-  z-index: 5000;
-  display: block;
-  margin-left: -0.5em;
-  padding: 0;
-  width: 1em;
-  height: 1em;
-  border: none;
-  background: transparent;
-  color: transparent;
-  font-size: 2em;
-  cursor: pointer;
-}
-
-.post-template button.trigger.background--light::before,
-.post-template button.trigger.background--light span::before {
-  color: black;
-}
-
-.post-template button.trigger.background--dark::before,
-.post-template button.trigger.background--dark span::before {
-  color: white;
-}
-
-.post-template .notepad-post-container:not(.notrans) button.trigger {
-  -webkit-transition: opacity 0.3s 0.5s;
-  transition: opacity 0.3s 0.5s;
-}
-
-.post-template .notepad-post-container.modify:not(.notrans) button.trigger {
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.post-template button.trigger::before {
-  position: absolute;
-  bottom: 100%;
-  left: -200%;
-  padding: 0.8em;
-  width: 500%;
-  color: black;
-  content: attr(data-info);
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  -webkit-backface-visibility: hidden;
-}
-
-.post-template button.trigger:focus {
-  outline: none;
-}
-
-.post-template button.trigger span {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.post-template button.trigger span::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: black;
-  content: "\f078";
-  text-transform: none;
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-family: 'FontAwesome';
-  line-height: 1;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  h1,
+  a,
+  .notepad-page-title a,
+  .notepad-post-title-simple a{
+    color: white;
+  }
 }
 
 .notepad-post-content {
@@ -244,15 +122,6 @@
   ol {
     padding-left: 1.25rem;
     font-size: 1.125rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: bold;
   }
 
   h1,
@@ -320,114 +189,6 @@
   }
 }
 
-.post-template .intro-effect-sliced:not(.notrans) .bg-img,
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-title {
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-}
-
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-header h1 {
-  -webkit-transition-property: color;
-  transition-property: color;
-}
-
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-header p {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-}
-
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-content > div {
-  -webkit-transition-property: -webkit-transform, opacity;
-  transition-property: transform, opacity;
-}
-
-.post-template .intro-effect-sliced:not(.notrans) .bg-img,
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-header h1,
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-title,
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-header p,
-.post-template .intro-effect-sliced:not(.notrans) .notepad-post-content > div {
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-
-.post-template .intro-effect-sliced.modify:not(.notrans) .notepad-post-header h1,
-.post-template .intro-effect-sliced.modify:not(.notrans) .notepad-post-title,
-.post-template .intro-effect-sliced.modify:not(.notrans) .notepad-post-header p,
-.post-template .intro-effect-sliced.modify:not(.notrans) .notepad-post-content > div {
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-
-.post-template .intro-effect-sliced .bg-img:first-child {
-  bottom: 50%;
-}
-
-.post-template .intro-effect-sliced .bg-img:last-child {
-  top: 50%;
-  position: fixed;
-  z-index: 900;
-}
-
-.post-template .intro-effect-sliced .bg-img:last-child img {
-  top: -100%;
-}
-
-.post-template .intro-effect-sliced.modify .bg-img:first-child {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-.post-template .intro-effect-sliced.modify .bg-img:last-child {
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-}
-
-.post-template .intro-effect-sliced .notepad-post-title {
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
-  transform: translateX(-50%) translateY(-50%) scale(0.7);
-}
-
-.post-template .intro-effect-sliced.modify .notepad-post-title {
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-  transform: translateX(-50%) translateY(-50%) scale(1);
-}
-
-.post-template .intro-effect-sliced .notepad-post-header p {
-  opacity: 0;
-  color: black;
-}
-
-.post-template .intro-effect-sliced.modify .notepad-post-header p {
-  opacity: 1;
-}
-
-.post-template .intro-effect-sliced.modify .notepad-post-header h1 {
-  color: black;
-}
-
-.post-template .intro-effect-sliced .notepad-post-content > div {
-  -webkit-transform: translateY(200px);
-  transform: translateY(200px);
-  opacity: 0;
-}
-
-.post-template .intro-effect-sliced.modify .notepad-post-content > div {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.post-template .intro-effect-sliced.modify:not(.notrans) .notepad-post-title {
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-
 .notepad-post-share {
   font-size: 1.875rem;
   padding: 0;
@@ -458,6 +219,11 @@
   z-index: 9999;
 }
 
+.notepad-post-title-wrapper.has-image {
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
 .notepad-page-title,
 .notepad-post-title-simple {
   margin: 0 auto;
@@ -473,7 +239,6 @@
   }
 
   h1 {
-    color: black;
     font-weight: 800;
     font-size: 3.125rem;
     padding: 0;
@@ -534,6 +299,14 @@
   h1 {
     padding: 0;
   }
+
+  .post-subtitle {
+    font-size: 1.5rem;
+    text-transform: none;
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: normal;
+  }
 }
 
 .post-meta-author,
@@ -573,8 +346,6 @@
 
 .row {
   max-width: 58.125rem;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
 }
 
 .row p {
@@ -664,8 +435,9 @@ iframe {
   *zoom: 1;
 }
 
-.post-list a > span {
-  float: right;
+.post-list .post-subtitle {
+  display: inline;
+  font-size: 0.7rem;
 }
 
 .post-list .entry-date {
@@ -673,10 +445,8 @@ iframe {
   font-size: 14px;
   text-transform: uppercase;
   float: right;
-}
 
-@media only screen and (min-width: 48em) {
-  .post-list .entry-date {
+  @media only screen and (min-width: 48em) {
     display: inline;
   }
 }
