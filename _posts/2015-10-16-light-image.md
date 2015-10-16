@@ -10,4 +10,4 @@ author: malcolm_young
 ---
 This post has a cover image using the `imagefeature` front matter tag. The image has a light background, so the title is dark.
 
-There's also an example of [a post with a dark cover images]({% post_url 2015-10-16-dark-image %}).
+There's also an example of [a post with a dark cover image]({{ site.url }}{% post_url 2015-10-16-dark-image %}).
