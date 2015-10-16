@@ -1,6 +1,8 @@
 # Notepad2
 This is a simple [Jekyll](https://jekyllrb.com/) theme for a team blog, with search and multiple authors, intended to be hosted on [Github Pages](https://pages.github.com/) without Jekyll plugins.
 
+This repo can be viewed at http://capgemini.github.io/notepad2/
+
 Forked from [Notepad by Hossain Mohd. Faysal](https://github.com/hmfaysal/Notepad), incorporating improvements made by the [Capgemini engineering team for their blog](http://capgemini.github.io/).
 
 ## Features
