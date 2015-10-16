@@ -22,7 +22,7 @@ General notes and suggestions for customizing **Notepad 2**.
 
 ## Basic Setup for a new Jekyll site
 
-1. [Install Jekyll](http://jekyllrb.com) and read through [this installation instructions]({{ site.baseurl }}/theme-setup/installing-jekyll-on-windows/) if you haven't already.
+1. [Install Jekyll](http://jekyllrb.com) and read through [this installation instructions]({{ site.url }}/theme-setup/installing-jekyll-on-windows/) if you haven't already.
 2. Fork the [Notepad 2 theme repo](https://github.com/Capgemini/notepad2/fork)
 3. Clone the repo you just forked.
 4. Edit `_config.yml` to personalize your site.
