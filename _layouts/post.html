@@ -2,69 +2,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-{% include head.html %}
-{% if site.dropcap %}<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>{% endif %}
+  {% include head.html %}
+  {% if site.dropcap %}<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-family:serif}}</style>{% endif %}
 </head>
-<body class="post-template">
+<body class="post-template {% if page.imagefeature %}post-with-image{% endif %}">
 {% include browser-upgrade.html %}
-{% if page.imagefeature %}
-        <main id="notepad-post-container" class="notepad-post-container intro-effect-sliced" role="main" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-            <header class="notepad-post-header">
-                <div class="bg-img"></div>
-
-                <div class="notepad-post-menu-header">
-{% else %}
-        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-            <header class="notepad-post-header-simple">
-                <div class="notepad-post-menu-header-simple">
-{% endif %}
-
-                  {% include header.html %}
-            </div>
-{% if page.imagefeature %}
-            <div class="notepad-post-title bg-check">
-                {% include post-meta.html %}
-            </div>
-            <div class="bg-img"></div>
-        </header>
-        <button class="trigger bg-check" data-info="Read more"><span>Trigger</span></button>
-        <img src="{{ site.url }}/images/{{ page.imagefeature }}" alt="cover-image" />
-{% else %}
-                <div class="notepad-post-title-simple row">
-                    <div class="small-12 columns">
-                        <div class="notepad-post-meta-simple">
-                          {% include post-meta.html %}
-                        </div>
-                    </div>
-                </div>
-            </header>
-{% endif %}
-{% if page.imagefeature %}
-            <article class="notepad-post-content post">
-{% else %}
-            <article class="notepad-post-content post tag-simple">
-{% endif %}
-            <div class="article-body" itemprop="description articleBody">{{ content }}</div>
-            </article>
-        <div class="cf"></div>
-{% if site.share %}{% include share.html %}{% endif %}
-        <div class="cf"></div>
-
-        {% include signoff.html %}
-
-        <div class="cf"></div>
-        {% if site.disqus_shortname and page.comments == true %}
-        <section class="notepad-disqus row">
-    <div class="small-12 columns">
-        <h1 class="notepad-comments-header">Comments</h1>
-        <div id="disqus_thread"></div>
-        {% include disqus_comments.html %}
+<main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+  <header class="notepad-post-header-simple">
+    <div class="notepad-post-menu-header-simple">
+      {% include header.html %}
     </div>
-</section>
-{% endif %}
-        <div class="cf"></div>
 
-    {% include footer.html %}
+    <div class="notepad-post-title-wrapper">
+
+      {% if page.imagefeature %}
+      <img src="{{ site.baseurl }}/images/{{ page.imagefeature }}" id="post-image-feature">
+      {% endif %}
+
+      <div class="notepad-post-title-simple row">
+        <div class="small-12 columns">
+          <div class="notepad-post-meta-simple">
+            {% include post-meta.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <article class="notepad-post-content post tag-simple">
+    <div class="article-body" itemprop="description articleBody">{{ content }}</div>
+  </article>
+  <div class="cf"></div>
+  {% if site.share %}{% include share.html %}{% endif %}
+  <div class="cf"></div>
+
+  {% include signoff.html %}
+
+  <div class="cf"></div>
+  {% if site.disqus_shortname and page.comments == true %}
+  <section class="notepad-disqus row">
+    <div class="small-12 columns">
+      <h1 class="notepad-comments-header">Comments</h1>
+      <div id="disqus_thread"></div>
+      {% include disqus_comments.html %}
+    </div>
+  </section>
+  {% endif %}
+  <div class="cf"></div>
+
+  {% include footer.html %}
 </main>
 {% include scripts.html %}
 </body>
