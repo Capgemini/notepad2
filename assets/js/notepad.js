@@ -8,6 +8,7 @@ var notepad = (function ($) {
     mainMenu = '.notepad-menu',
     bgCheckClass = '.notepad-post-title-wrapper',
     postCoverImg = '#post-image-feature',
+    $coverImage = $(postCoverImg),
 
     // post animations on homepage
     indexPostAnimate = function () {
@@ -42,16 +43,18 @@ var notepad = (function ($) {
           targets: bgCheckClass,
           images: postCoverImg
         });
+
+        $coverImage.remove();
       }
     },
 
     postHeaderCoverImg = function () {
-      var $coverImage = $(postCoverImg);
+
       if ($coverImage.length) {
         var img = $coverImage.attr('src');
 
         $('.notepad-post-title-wrapper').css('background-image', 'url("' + img + '")').css('min-height', $coverImage.height()).addClass('has-image');
-        $coverImage.remove();
+
       }
     },
 
