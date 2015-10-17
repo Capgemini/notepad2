@@ -2,12 +2,12 @@
 
 var notepad = (function ($) {
 
-    var indexPostClass = '.notepad-index-post',
-        mobileMenuButton = '.notepad-mobile-menu a',
-        mobileMenuCloseButton = '.notepad-mobile-close-btn',
-        mainMenu = '.notepad-menu',
-        bgCheckClass = '.notepad-post-title-wrapper',
-        postCoverImg = '#post-image-feature',
+  var indexPostClass = '.notepad-index-post',
+    mobileMenuButton = '.notepad-mobile-menu a',
+    mobileMenuCloseButton = '.notepad-mobile-close-btn',
+    mainMenu = '.notepad-menu',
+    bgCheckClass = '.notepad-post-title-wrapper',
+    postCoverImg = '#post-image-feature',
 
     // post animations on homepage
     indexPostAnimate = function () {
@@ -48,7 +48,7 @@ var notepad = (function ($) {
     postHeaderCoverImg = function () {
       var $coverImage = $(postCoverImg);
       if ($coverImage.length) {
-        var img =  $coverImage.attr('src');
+        var img = $coverImage.attr('src');
 
         $('.notepad-post-title-wrapper').css('background-image', 'url("' + img + '")').css('min-height', $coverImage.height()).addClass('has-image');
         $coverImage.remove();
@@ -57,14 +57,16 @@ var notepad = (function ($) {
 
     // notepad javascripts initialization
     init = function () {
+      indexPostAnimate();
+      $(window).on('scroll', function () {
         indexPostAnimate();
-        $(window).on('scroll', function() {
-            indexPostAnimate();
-        });
-        headerTitlesBackgroundCheck();
-        postHeaderCoverImg();
-        mobileMenu();
-        $('p:has(> img)').addClass('with-image');
+      });
+
+      postHeaderCoverImg();
+      headerTitlesBackgroundCheck();
+
+      mobileMenu();
+      $('p:has(> img)').addClass('with-image');
     };
 
   return {
