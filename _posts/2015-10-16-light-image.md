@@ -4,7 +4,7 @@ title: "Post with Light Cover Image and Text"
 description: "Custom written post descriptions are the way to go... if you're not lazy."
 category: theme
 tags: [sample post, readability]
-imagefeature: oregon.jpg
+imagefeature: girona.jpg
 share: true
 author: malcolm_young
 ---
