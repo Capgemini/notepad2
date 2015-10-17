@@ -62,8 +62,8 @@ var notepad = (function ($) {
         indexPostAnimate();
       });
 
-      postHeaderCoverImg();
       headerTitlesBackgroundCheck();
+      postHeaderCoverImg();
 
       mobileMenu();
       $('p:has(> img)').addClass('with-image');
