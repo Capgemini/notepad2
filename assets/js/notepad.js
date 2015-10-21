@@ -47,7 +47,7 @@ var notepad = (function ($) {
       postHeaderCoverImg();
       headerTitlesBackgroundCheck();
 
-      $coverImage.remove();
+      $coverImage.hide();
 
       mobileMenu();
       $('p:has(> img)').addClass('with-image');
