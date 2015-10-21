@@ -50,7 +50,6 @@ var notepad = (function ($) {
       $coverImage.hide();
 
       mobileMenu();
-      $('p:has(> img)').addClass('with-image');
     };
 
   return {
