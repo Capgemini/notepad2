@@ -43,7 +43,6 @@ var notepad = (function ($) {
           targets: bgCheckClass,
           images: postCoverImg
         });
-
       }
     },
 
@@ -64,8 +63,9 @@ var notepad = (function ($) {
         indexPostAnimate();
       });
 
-      headerTitlesBackgroundCheck();
       postHeaderCoverImg();
+      headerTitlesBackgroundCheck();
+
       $coverImage.remove();
 
       mobileMenu();
