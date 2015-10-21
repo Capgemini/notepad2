@@ -9,20 +9,6 @@ var notepad = (function ($) {
     postCoverImg = '#post-image-feature',
     $coverImage = $(postCoverImg),
 
-    // post animations on homepage
-    indexPostAnimate = function () {
-      if ($(indexPostClass).length) {
-        $(indexPostClass).each(function () {
-          var postPos = $(this).offset().top;
-          var topOfWindow = $(window).scrollTop(),
-            windowHeight = $(window).height();
-          if (postPos < topOfWindow + (windowHeight / 1.4)) {
-            $(this).addClass('fadeInDown');
-          }
-        });
-      }
-    },
-
     mobileMenu = function () {
       if ($(mainMenu).length) {
         $(mobileMenuButton).on('click', function (e) {
