@@ -44,7 +44,6 @@ var notepad = (function ($) {
           images: postCoverImg
         });
 
-        $coverImage.remove();
       }
     },
 
@@ -67,6 +66,7 @@ var notepad = (function ($) {
 
       headerTitlesBackgroundCheck();
       postHeaderCoverImg();
+      $coverImage.remove();
 
       mobileMenu();
       $('p:has(> img)').addClass('with-image');
