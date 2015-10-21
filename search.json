@@ -6,7 +6,7 @@
 		  "title"      : "{{ post.title | escape }}",
 		  "category"   : "{{ post.category }}",
           "content": {{ post.content | markdownify | strip_html | jsonify }},
-          "url"        : "{{ post.url }}",
+          "url"        : "{{ site.url }}{{ post.url }}",
 		  "date"       : "{{ post.date }}",
 		  "shortdate"  : "{{ post.date | date: '%B %d, %Y' }}"
 		} {% unless forloop.last %},{% endunless %}
