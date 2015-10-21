@@ -2,8 +2,7 @@
 
 var notepad = (function ($) {
 
-  var indexPostClass = '.notepad-index-post',
-    mobileMenuButton = '.notepad-mobile-menu a',
+  var mobileMenuButton = '.notepad-mobile-menu a',
     mobileMenuCloseButton = '.notepad-mobile-close-btn',
     mainMenu = '.notepad-menu',
     bgCheckClass = '.notepad-post-title-wrapper',
@@ -58,10 +57,6 @@ var notepad = (function ($) {
 
     // notepad javascripts initialization
     init = function () {
-      indexPostAnimate();
-      $(window).on('scroll', function () {
-        indexPostAnimate();
-      });
 
       postHeaderCoverImg();
       headerTitlesBackgroundCheck();
